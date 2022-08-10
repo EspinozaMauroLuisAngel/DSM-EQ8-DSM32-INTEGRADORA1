@@ -1,11 +1,11 @@
 $('#formregistro').submit(function(e){
     e.preventDefault();
-    var nombre = $.trim($("#nombre").val());
+    var namee = $.trim($("#nombre").val());
     var email = $.trim($("#email").val());
     var username = $.trim($("#username").val());
-    var contraseña = $.trim($("#contraseña").val());
+    var passwordd = $.trim($("#contraseña").val());
     
-    if(nombre.length == "" || email == "" || username == "" || contraseña == "" ){ 
+    if(namee.length == "" || email == "" || username == "" || passwordd == "" ){ 
         Swal.fire({
             type:'error',
             title: 'Debe Completar los Campos', 
@@ -16,7 +16,7 @@ $('#formregistro').submit(function(e){
             url:"bd/registro.php",
             type:"POST",
             datatype: "json",
-            data: {nombre:nombre, correo:correo, usuario:usuario,contrasena:contrasena},
+            data: {namee:namee, email:email, username:username, passwordd:passwordd},
             success:function(data){
                 if(data == "null"){
                     Swal.fire({
@@ -31,7 +31,7 @@ $('#formregistro').submit(function(e){
                         confirmButtonText:'Ingresar'
                     }).then((result) => {
                         if(result.value){
-                            window.location.href ="login.php";
+                            window.location.href ="";
                         }
                     })
                 }

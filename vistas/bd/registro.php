@@ -11,9 +11,9 @@ $email = (isset($_POST['email'])) ? $_POST['email'] : '';
 $username = (isset($_POST['username'])) ? $_POST['username'] : '';
 $passwordd = (isset($_POST['contraseña'])) ? $_POST['contraseña'] : '';
 
-$pass = md5($contraseña); //encripto la clave enviada por el usuario para compararla con la clava encriptada y almacenada en la BD
+$pass = md5($passwordd); //encripto la clave enviada por el usuario para compararla con la clava encriptada y almacenada en la BD
 
-$consulta = "SELECT * FROM registro WHERE nombre='$nombre' WHERE email='$email' WHERE username='$username' AND contraseña='$pass' ";
+$consulta = "SELECT * FROM registro WHERE namee='$nombre' WHERE email='$email' WHERE username='$username' AND contraseña='$pass' ";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 

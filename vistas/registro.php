@@ -37,18 +37,18 @@
 							</div>
 						</div> 
 						<div class="main-login main-center">
-                            <form id="formregistro" class="form" action="./bd/registroo.php" method="POST">
+                            <form id="formregistro" class="form" action="" method="post">
                                 <div class="form-group">
                                     <label for="nombre" class="text-white">Nombre</label>
-                                    <input type="text" name="nombre" id="nombre" class="form-control">
+                                    <input type="nombre" name="nombre" id="nombre" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="text-white">Correo Electronico</label>
-                                    <input type="email" name="correo" id="email" class="form-control">
+                                    <input type="email" name="email" id="email" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="username" class="text-white">Nombre Usuario</label>
-                                    <input type="usuario" name="username" id="username" class="form-control">
+                                    <input type="username" name="username" id="username" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="contraseña" class="text-write">Contraseña</label>
