@@ -39,8 +39,8 @@
 						<div class="main-login main-center">
                             <form id="formregistro" class="form" action="" method="post">
                                 <div class="form-group">
-                                    <label for="nombre" class="text-white">Nombre</label>
-                                    <input type="nombre" name="nombre" id="nombre" class="form-control">
+                                    <label for="namee" class="text-white">Nombre</label>
+                                    <input type="namee" name="namee" id="namee" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="text-white">Correo Electronico</label>
@@ -51,12 +51,15 @@
                                     <input type="username" name="username" id="username" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="contraseña" class="text-write">Contraseña</label>
-                                    <input type="contraseña" name="contrasena" id="contraseña" class="form-control">
+                                    <label for="passwordd" class="text-write">Contraseña</label>
+                                    <input type="passwordd" name="passwordd" id="passwordd" class="form-control">
                                 </div> 
                                 <br>
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Registrarme</button>
                             </form>
+                            <?php 
+                            include("bd/registro.php");
+                            ?>
 							<div>
                                 <p class="mb-0">¿Ya tienes una cuenta? <a href="login.php" class="text-white-50 fw-bold"> <br> Inicia Secion</a> </p>
                             </div>
@@ -70,11 +73,11 @@
       </div>
     </div>
 </section>   
-<?php include_once('../layouts/footer.php')?><!--Footer. Osea el pie de pagina-->
+<?php include_once('../layouts/footer.php')?><!--Footer. Osea el pie de pagina--> 
 <script src="../vistas/jquery/jquery-3.3.1.min.js"></script>
 <script src="../vistas/bootstrap/js/bootstrap.min.js"></script>
 <script src="../vistas/popper/popper.min.js"></script>
 <script src="../vistas/plugins/sweetalert2/sweetalert2.all.min.js"></script>
-<script src="registro.js"></script>   
+<script src="registro.js"></script>
 </body>
 </html>

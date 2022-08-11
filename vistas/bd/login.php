@@ -26,6 +26,7 @@ if($resultado->rowCount() >= 1){
 print json_encode($data);
 $conexion=null;
 
+?>
 
 
 

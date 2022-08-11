@@ -1,14 +1,14 @@
 $('#formregistro').submit(function(e){
     e.preventDefault();
-    var namee = $.trim($("#nombre").val());
+    var namee = $.trim($("#namee").val());
     var email = $.trim($("#email").val());
     var username = $.trim($("#username").val());
-    var passwordd = $.trim($("#contraseña").val());
+    var passwordd = $.trim($("#passwordd").val());
     
     if(namee.length == "" || email == "" || username == "" || passwordd == "" ){ 
         Swal.fire({
             type:'error',
-            title: 'Debe Completar los Campos', 
+            title: 'Debe Completar todos los Campos', 
         });
         return false;
     }else{
@@ -21,7 +21,7 @@ $('#formregistro').submit(function(e){
                 if(data == "null"){
                     Swal.fire({
                         type:'error',
-                        title:'Datos Incorrecto',
+                        title:'Usuario y/o Contraseña Incorrecto',
                     });   
                 }else{
                     Swal.fire({
@@ -31,11 +31,11 @@ $('#formregistro').submit(function(e){
                         confirmButtonText:'Ingresar'
                     }).then((result) => {
                         if(result.value){
-                            window.location.href ="";
+                            window.location.href ="login.php";
                         }
                     })
                 }
             }
         })
     }   
-}); 
+});    
