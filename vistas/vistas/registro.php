@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> AprendiendoAndo</title>
+    <title> AprendiendoAndo </title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">AprendiendoAndo<sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">AprendiendoAndo <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -84,8 +84,6 @@
                 </div>
             </li>
             
-
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -133,11 +131,49 @@
                         </li>
                     </ul>
                 </nav>
-                <a href="index.php"><div  class="text-center"><h1> Administracion De AprendiendoAndo</h1></div></a><br>
-                <a href="../../index.php"><div class="text-center"> <h1> Menu AprendiendoAndo</h1></div> </a> <br>
-                <a href="../../index.php#portfolio"><div class="text-center"> <h1> Cursos </h1></div></a> <br>
-                <a href="../login.php"><div class="text-center"> <h1> Iniciar Secion </h1></div></a> <br>
-                <a href="../registro.php"><div class="text-center"> <h1> Registrarme </h1></div></a> <br>
+                <!--  Formulario Direcciones -->
+                <div class="col-xl-12 col-lg-12">
+                          <div class="card shadow mb-4">
+                              <!-- Card Header - Dropdown -->
+                              <div
+                                  class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                  <h6 class="m-0 font-weight-bold text-primary">Agregar Usuarios</h6>
+                                  <div class="dropdown no-arrow"> 
+                                  </div>
+                              </div>
+                              <!-- Card Foremulario Direcciones -->
+                              <div class="card-body">
+                              <form id="formregistro" class="form" action="" method="post">
+                                  <div class="col-12">
+                                      <div class="row">
+                                          <div class="col-6">
+                                              <label for="namee" class="form-label">Nombre:</label>
+                                              <input type="namee" name="namee" id="namee" class="form-control" aria-describedby="emailHelp">
+                                          </div>
+                                          <div class="col-6">
+                                          <label for="email" class="form-label">Correo Electronico:</label>
+                                          <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp">
+                                          </div>
+                                          <div class="col-6">
+                                            <label for="username" class="form-label">Nombre de Usuario:</label>
+                                            <input type="username" name="username" id="username" class="form-control" aria-describedby="emailHelp">
+                                        </div>
+                                          <div class="col-6">
+                                              <label for="passwordd" class="form-label">Contraseña:</label>
+                                              <input type="passwordd" name="passwordd" id="passwordd" class="form-control" aria-describedby="emailHelp">
+                                          </div>
+                                          <div class="m-3">
+                                          <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </div>
+                                  </div>
+                                </form>
+                                <?php 
+                                include("../bd/registro.php");
+                                ?>
+                              </div>
+                          </div>
+                      </div>
             </div>
         </div>
     </div>
@@ -182,6 +218,11 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
+<script src="../vistas/jquery/jquery-3.3.1.min.js"></script>
+<script src="../vistas/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vistas/popper/popper.min.js"></script>
+<script src="../vistas/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+<script src=""></script>
 </body>
 
 </html>

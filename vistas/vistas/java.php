@@ -83,9 +83,6 @@
                     </div>
                 </div>
             </li>
-            
-
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -133,14 +130,60 @@
                         </li>
                     </ul>
                 </nav>
-                <a href="index.php"><div  class="text-center"><h1> Administracion De AprendiendoAndo</h1></div></a><br>
-                <a href="../../index.php"><div class="text-center"> <h1> Menu AprendiendoAndo</h1></div> </a> <br>
-                <a href="../../index.php#portfolio"><div class="text-center"> <h1> Cursos </h1></div></a> <br>
-                <a href="../login.php"><div class="text-center"> <h1> Iniciar Secion </h1></div></a> <br>
-                <a href="../registro.php"><div class="text-center"> <h1> Registrarme </h1></div></a> <br>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Cursos</h1>
+</div>
+<!-- Content Row -->
+<div class="row">
+
+    <!--  Formulario Direcciones -->
+    <div class="col-xl-12 col-lg-12">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div
+                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Lista De Cursos</h6>
+                <div class="dropdown no-arrow">      
+                </div>
+            </div>
+            <!-- Card Foremulario Direcciones -->
+            <div class="card-body">
+            <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Instructor</th>
+                        <th>Nombre Del Curso</th>
+                        <th>Descripcion Del Curso</th>
+                        <th>Temas</th>
+                        <th>Duracion Del Curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DM</td>
+                        <td>Curso Basico de Java</td>
+                        <td>Java es un lenguaje sencillo y orientado a objetos, que permite el desarrollo de aplicaciones en diversas áreas, como seguridad, animación, acceso a bases de datos, aplicaciones cliente-servidor, interfaces gráficas, páginas Web interactivas y desarrollo de aplicaciones móviles, entre otras.</td>
+                        <td>Curso Basico de Java - Presentación del curso 00</td>
+                        <td>15 Minutos</td>
+                    </tr>
+                </tbody>
+                
+               
+            </table>
+            </div>
             </div>
         </div>
     </div>
+</div> 
+</div>
+</div>
+</div>
+</div>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
