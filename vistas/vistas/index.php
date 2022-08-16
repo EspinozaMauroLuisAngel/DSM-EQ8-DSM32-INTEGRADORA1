@@ -133,11 +133,11 @@
                         </li>
                     </ul>
                 </nav>
-                <a href="index.php"><div  class="text-center"><h1> Administracion De AprendiendoAndo</h1></div></a><br>
-                <a href="../../index.php"><div class="text-center"> <h1> Menu AprendiendoAndo</h1></div> </a> <br>
-                <a href="../../index.php#portfolio"><div class="text-center"> <h1> Cursos </h1></div></a> <br>
-                <a href="../login.php"><div class="text-center"> <h1> Iniciar Secion </h1></div></a> <br>
-                <a href="../registro.php"><div class="text-center"> <h1> Registrarme </h1></div></a> <br>
+                <a href="index.php"><div  class="text-center">Administracion De AprendiendoAndo</div></a><br>
+                <a href="../../index.php"><div class="text-center">Menu AprendiendoAndo</div> </a> <br>
+                <a href="../../index.php#portfolio"><div class="text-center">Cursos</div></a> <br>
+                <a href="../login.php"><div class="text-center">Iniciar Secion</div></a> <br>
+                <a href="../registro.php"><div class="text-center">Registrarme</div></a> <br>
             </div>
         </div>
     </div>

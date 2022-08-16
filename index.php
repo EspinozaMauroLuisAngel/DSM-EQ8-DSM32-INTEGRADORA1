@@ -215,7 +215,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/js.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Java es un lenguaje sencillo y orientado a objetos, que permite el desarrollo de aplicaciones en diversas áreas, como seguridad, animación, acceso a bases de datos, aplicaciones cliente-servidor, interfaces gráficas, páginas Web interactivas y desarrollo de aplicaciones móviles, entre otras.</p>
-                                    <a href="./cursos/js.php" class="btn btn-primary">
+                                    <a href="Nuevo/cursos/jscript.php" class="btn btn-primary">
                                         Iniciar
                                     </a>
                                 </div>
@@ -246,7 +246,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/html.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos.</p>
-                                    <a href="./cursos/html.php" class="btn btn-primary" >
+                                    <a href="Nuevo/cursos/html.php" class="btn btn-primary" >
                                         Iniciar
                                     </a >
                                 </div>
@@ -277,7 +277,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/java.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Java es un lenguaje sencillo y orientado a objetos, que permite el desarrollo de aplicaciones en diversas áreas, como seguridad, animación, acceso a bases de datos, aplicaciones cliente-servidor, interfaces gráficas, páginas Web interactivas y desarrollo de aplicaciones móviles, entre otras.</p>
-                                    <a href="./cursos/java.php" class="btn btn-primary" >
+                                    <a href="Nuevo/cursos/java.php" class="btn btn-primary" >
                                         Iniciar
                                     </a >
                                 </div>
@@ -308,7 +308,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/git.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">GitHub es una forja para alojar proyectos utilizando el sistema de control de versiones Git. Se utiliza principalmente para la creación de código fuente de programas de ordenador.</p>
-                                    <a href="./cursos/git.php" class="btn btn-primary" >
+                                    <a href="Nuevo/cursos/git.php" class="btn btn-primary" >
                                         Iniciar
                                     </a>
                                 </div>
@@ -339,7 +339,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/sql.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">El Lenguaje de Consulta Estructurada (SQL) es un lenguaje gestor para el manejo de la información en las bases de datos relacionales. Este tipo de lenguaje de programación permite comunicarse con la base de datos y realizar operaciones de acceso y manipulación de la información almacenada.</p>
-                                    <a href="./cursos/sql.php" class="btn btn-primary" >
+                                    <a href="Nuevo/cursos/sql.php" class="btn btn-primary" >
                                         Iniciar
                                     </a >
                                 </div>
@@ -370,7 +370,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/css.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">CSS es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.</p>
-                                    <a href="./cursos/css.php" class="btn btn-primary" >
+                                    <a href="Nuevo/cursos/css.php" class="btn btn-primary" >
                                         Iniciar
                                     </a>
                                 </div>

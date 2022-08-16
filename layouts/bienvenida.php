@@ -1,9 +1,13 @@
 <div> 
     <h2 class="text-center">Bienvenido 
+        
         <?php
-        echo ("usuario");
+        include ("../vistas/bd/registro.php");
+        $username = ($_POST["username"]);
+        echo ($username);
         ?>
         Estas listo para Empezar
+
     </h2>
 </div>
 

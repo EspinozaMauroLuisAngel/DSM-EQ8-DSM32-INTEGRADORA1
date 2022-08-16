@@ -33,12 +33,12 @@
                     <p class="text-white-50 mb-5"> Por Favor, Introduce tu Usuario y Contraseña </p>
                     <form id="formlogin" class="form" action="" method="post">
                       <div class="form-group">
-                        <label for="usuario" class="text-white">Usuario</label>
-                        <input type="text" name="usuario" id="usuario" class="form-control">
+                        <label for="username" class="text-white">Usuario</label>
+                        <input type="text" name="username" id="username" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label for="contraseña" class="text-write">Contraseñaa</label>
-                        <input type="contraseña" name="contraseña" id="contraseña" class="form-control"> 
+                        <label for="passwordd" class="text-write">Contraseñaa</label>
+                        <input type="text" name="passwordd" id="passwordd" class="form-control"> 
                       </div> <br>
                       <button class="btn btn-outline-light btn-lg px-5" type="submit">Iniciar Secion</button>
                     </form>

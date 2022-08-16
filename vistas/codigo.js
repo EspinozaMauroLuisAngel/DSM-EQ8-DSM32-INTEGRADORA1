@@ -1,9 +1,9 @@
 $('#formlogin').submit(function(e){
     e.preventDefault();
-    var usuario = $.trim($("#usuario").val());
-    var contraseña = $.trim($("#contraseña").val());
+    var username = $.trim($("#username").val());
+    var passwordd = $.trim($("#passwordd").val());
     
-    if(usuario.length == "" || contraseña == "" ){ 
+    if(username.length == "" || passwordd == "" ){ 
         Swal.fire({
             type:'error',
             title: 'Debe Ingresar Usuario y/o Contraseña', 
@@ -14,7 +14,7 @@ $('#formlogin').submit(function(e){
             url:"bd/login.php",
             type:"POST",
             datatype: "json",
-            data: {usuario:usuario, contraseña:contraseña},
+            data: {username:username, passwordd:passwordd},
             success:function(data){
                 if(data == "null"){
                     Swal.fire({
@@ -36,4 +36,5 @@ $('#formlogin').submit(function(e){
             }
         })
     }   
-}); 
+});
+    
