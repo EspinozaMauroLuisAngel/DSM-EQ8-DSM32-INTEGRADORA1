@@ -11,4 +11,3 @@ $passwordd= md5 ($passwordd);
 $consulta = "INSERT INTO registro(namee, email, username, passwordd) VALUES ('$namee','$email','$username', '$passwordd')";
 $resultado = mysqli_query($conex,$consulta);
 
-?>
