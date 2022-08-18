@@ -43,7 +43,7 @@ $(document).on("click", ".btnEditar", function(){
     namee = fila.find('td:eq(1)').text();
     email = fila.find('td:eq(2)').text();
     username = fila.find('td:eq(3)').text();
-    passwordd = fila.find(fila.find('td:eq(4)').text());
+    passwordd = fila.find('td:eq(4)').text();
 
     $("#namee").val(namee);
     $("#email").val(email);
