@@ -1,22 +1,54 @@
+<?php
+include_once 'bd/conexion.php';
+$objeto = new Conexion();
+$conexion = $objeto->Conectar();
+
+$consulta = "SELECT idInstructor, nombreInstructor, correoInstructor, usuarioInstructor, contraseñaInstructor FROM instructores";
+$resultado = $conexion->prepare($consulta);
+$resultado->execute();
+$data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> AprendiendoAndo </title>
+    <title> AprendiendoAndo</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"rel="stylesheet">
+    
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="#" />  
+    <title>Tutorial DataTables</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <!-- CSS personalizado --> 
+    <link rel="stylesheet" href="main.css">  
+    
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">  
+    
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"rel="stylesheet">
+    
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -35,7 +67,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">AprendiendoAndo <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">AprendiendoAndo<sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -67,12 +99,12 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="cursos.php" data-target="#collapsetres"
+                <a class="nav-link collapsed" href=""  data-target="#collapsetres"
                     aria-expanded="true" aria-controls="collapsetres">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Cursos</span>
                 </a>
-            </li>
+             
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="instructores.php" data-target="#collapsetres"
@@ -80,8 +112,8 @@
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Instructores</span>
                 </a>
-            </li>
-            
+            </li>    
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -129,52 +161,96 @@
                         </li>
                     </ul>
                 </nav>
-                <!--  Formulario Direcciones -->
-                <div class="col-xl-12 col-lg-12">
-                          <div class="card shadow mb-4">
-                              <!-- Card Header - Dropdown -->
-                              <div
-                                  class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                  <h6 class="m-0 font-weight-bold text-primary">Agregar Administadores</h6>
-                                  <div class="dropdown no-arrow"> 
-                                  </div>
-                              </div>
-                              <!-- Card Foremulario Direcciones -->
-                              <div class="card-body">
-                              <form id="formregistro" class="form" action="" method="post">
-                                  <div class="col-12">
-                                      <div class="row">
-                                          <div class="col-6">
-                                              <label for="namee" class="form-label">Nombre:</label>
-                                              <input type="namee" name="namee" id="namee" class="form-control" aria-describedby="emailHelp">
-                                          </div>
-                                          <div class="col-6">
-                                          <label for="email" class="form-label">Correo Electronico:</label>
-                                          <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp">
-                                          </div>
-                                          <div class="col-6">
-                                            <label for="username" class="form-label">Nombre de Usuario:</label>
-                                            <input type="username" name="username" id="username" class="form-control" aria-describedby="emailHelp">
-                                        </div>
-                                          <div class="col-6">
-                                              <label for="passwordd" class="form-label">Contraseña:</label>
-                                              <input type="passwordd" name="passwordd" id="passwordd" class="form-control" aria-describedby="emailHelp">
-                                          </div>
-                                          <div class="m-3">
-                                          <button type="submit" class="btn btn-primary">Guardar</button>
-                                        </div>
-                                        </div>
-                                  </div>
-                                </form>
-                                <?php 
-                                include("../bd/registro.php");
-                                ?>
-                              </div>
-                          </div>
-                      </div>
+
+
+            <div class="container">
+        <div class="row">
+            <div class="col-lg-12">            
+            <button id="btnNuevo" type="button" class="btn btn-success" data-toggle="modal">Nuevo</button>    
             </div>
+        </div>    
+    </div>      
+      <br>  
+    <div class="container">
+        <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">        
+                        <table id="tablaPersonas" class="table table-striped table-bordered table-condensed" style="width:100%">
+                        <thead class="text-center">
+                            <tr>
+                                <th>id Instructor</th>
+                                <th>nombre Instructor</th>
+                                <th>correo Instructor</th>                                
+                                <th>usuario Instructor</th> 
+                                <th>contraseña Instructor</th>  
+                                <th>Acciones</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php                            
+                            foreach($data as $dat) {                                                        
+                            ?>
+                            <tr>
+                                <td><?php echo $dat['idInstructor'] ?></td>
+                                <td><?php echo $dat['nombreInstructor'] ?></td>
+                                <td><?php echo $dat['correoInstructor'] ?></td>
+                                <td><?php echo $dat['usuarioInstructor'] ?></td>  
+                                <td><?php echo $dat['contraseñaInstructor'] ?></td>    
+                                <td></td>
+                            </tr>
+                            <?php
+                                }
+                            ?>                                
+                        </tbody>        
+                       </table>                    
+                    </div>
+                </div>
+        </div>  
+    </div>    
+      
+<!--Modal para CRUD-->
+<div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <form id="formPersonas">    
+            <div class="modal-body">
+            <div class="form-group">
+                <label for="nombreInstructor" class="text-red">nombre Instructor</label>
+                <input type="nombreInstructor" name="nombreInstructor" id="nombreInstructor" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="correoInstructor" class="text-red">correo Instructor</label>
+                <input type="correoInstructor" name="correoInstructor" id="correoInstructor" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="usuarioInstructor" class="text-red">usuario Instructor</label>
+                <input type="usuarioInstructor" name="usuarioInstructor" id="usuarioInstructor" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="contraseñaInstructor" class="text-red">contraseña Instructor</label>
+                <input type="contraseñaInstructor" name="contraseñaInstructor" id="contraseñaInstructor" class="form-control">
+            </div>            
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
+            </div>
+        </form>    
         </div>
     </div>
+</div>
+
+
+
+
+
+</div>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
@@ -216,11 +292,20 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
-<script src="../vistas/jquery/jquery-3.3.1.min.js"></script>
-<script src="../vistas/bootstrap/js/bootstrap.min.js"></script>
-<script src="../vistas/popper/popper.min.js"></script>
-<script src="../vistas/plugins/sweetalert2/sweetalert2.all.min.js"></script>
-<script src=""></script>
+     <!-- jQuery, Popper.js, Bootstrap JS -->
+     <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+    <!-- datatables JS -->
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
+     
+    <script type="text/javascript" src="main2.js"></script>  
+
 </body>
 
-</html>
+</html>               
+                                                        
+                     
+
+                      

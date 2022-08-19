@@ -86,35 +86,34 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Registro De Usuarios</span>
+                    <span>Registro De Administradores</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tablas de Usuarios</h6>
-                        <a class="collapse-item" href="registro.php">Agregar Usuarios</a>
-                        <a class="collapse-item" href="usuarios.php">Usuarios Registrados</a>
+                        <h6 class="collapse-header">Tablas de Administadores</h6>
+                        <a class="collapse-item" href="registro.php">Agregar Administadores</a>
+                        <a class="collapse-item" href="usuarios.php">Administadores Registrados</a>
                     </div>
                 </div>
             </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapsetres"
+                <a class="nav-link collapsed" href="cursos.php"  data-target="#collapsetres"
                     aria-expanded="true" aria-controls="collapsetres">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Cursos</span>
                 </a>
-                <div id="collapsetres" class="collapse" aria-labelledby="headingtres" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tablas de Cursoss</h6>
-                        <a class="collapse-item" href="js.php">JavaScript</a>
-                        <a class="collapse-item" href="html.php">HTML</a>
-                        <a class="collapse-item" href="java.php">Java</a>
-                        <a class="collapse-item" href="git.php">Git</a>
-                        <a class="collapse-item" href="sql.php">SQL</a>
-                        <a class="collapse-item" href="css.php">css</a>
-                    </div>
-                </div>
-            </li>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="instructores.php" data-target="#collapsetres"
+                    aria-expanded="true" aria-controls="collapsetres">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Instructores</span>
+                </a>
+            </li>    
+
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

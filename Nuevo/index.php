@@ -72,10 +72,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="sb-sidenav-footer">
+                
+                <!-- <div class="sb-sidenav-footer">
+                    <?php if (!empty($username));?>
                     <div class="small">Logged in as:</div>
-                    Usuario @
-                </div>
+                    Usuario @ <?= $username['username']?>
+                </div> -->
+
             </nav>
         </div>
         <div id="layoutSidenav_content">

@@ -37,7 +37,8 @@ switch($opcion){
         $consulta = "DELETE FROM registro WHERE id='$id' ";		
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();                           
-        break;        
+        break;
+                
 }
 
 print json_encode($data, JSON_UNESCAPED_UNICODE); //enviar el array final en formato json a JS
